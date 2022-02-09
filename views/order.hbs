@@ -1,0 +1,52 @@
+<div class="container">
+    <h1>Корзина</h1>
+
+    <h3>Ваши заказы</h3>
+
+    <table class="table-cart">
+        <thead>
+        <tr>
+            <th>Товары</th>
+            <th>Количество</th>
+            <th class="align-right">Стоимость</th>
+        </tr>
+        </thead>
+        <tbody class="tbodyEl"></tbody>
+    </table>
+
+    <!---->
+
+    <h3>Оформление заказа</h3>
+
+    <div class="row">
+        <div class="col col-sm-6">
+            <form id="formOrderSubmit" action="" method="post">
+                <div class="form-control">
+                    <label>Имя</label>
+                    <input type="text" name="name" value="Роман" placeholder="Имя">
+                </div>
+
+                <div class="form-control">
+                    <label>Номер телефона</label>
+                    <input type="tel" name="tel" value="+79482346578" placeholder="Номер телефона">
+                </div>
+
+                <div class="form-control">
+                    <label>Почта</label>
+                    <input type="email" name="email" value="q@q.qq" placeholder="Почта">
+                </div>
+
+                <div class="form-control">
+                    <label>Адрес</label>
+                    <textarea name="address" placeholder="Введите адрес назначения">г. Москва, Пушкина 24, кв. 8</textarea>
+                </div>
+
+                <div class="form-control">
+                    <label><input type="checkbox" name="checkbox">Согласие на обработку личных данных</label>
+                </div>
+
+                <button type="submit" class="button-primary">Оформить заказ</button>
+            </form>
+        </div>
+    </div>
+</div>

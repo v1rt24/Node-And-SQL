@@ -1,0 +1,23 @@
+{
+  "name": "nodeappstore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "server:nodemon": "nodemon app.js",
+    "debug": "set DEBUG=express:router & node app.js",
+    "debugnodemon": "set DEBUG=express:router & nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "nodemailer": "^6.7.2",
+    "pg": "^8.7.1"
+  }
+}

@@ -1,0 +1,49 @@
+<div class="container">
+    <h1 class="h2">Заказы</h1>
+    <section class="orderTable">
+        <table>
+            <thead>
+            <tr>
+                <th>id</th>
+                <th>id пользователя</th>
+                <th>id товара</th>
+                <th>Стоимость товара</th>
+                <th>Количество</th>
+                <th>Общая сумма</th>
+                <th>Дата заказа</th>
+                <th>Пользователь</th>
+                <th>Номер телефона</th>
+                <th>Адрес</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each orders}}
+                <tr>
+                    <td>{{this.shoporder_id}}</td>
+                    <td>{{this.user_id}}</td>
+                    <td>{{this.goods_id}}</td>
+                    <td>{{this.goods_cost}}</td>
+                    <td>{{this.goods_amount}}</td>
+                    <td>{{this.total}}</td>
+                    <td>{{this.date}}</td>
+                    <td>{{this.user_name}}</td>
+                    <td>{{this.user_phone}}</td>
+                    <td>{{this.address}}</td>
+                </tr>
+            {{/each}}
+            <tr>
+                <td colspan="4">
+                    <p class="h6"><strong>Итого</strong></p>
+                </td>
+                <td>{{allCount}}</td>
+                <td><strong>{{allCost}}</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="align-right"></div>
+    </section>
+</div>

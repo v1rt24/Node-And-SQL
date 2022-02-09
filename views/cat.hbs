@@ -1,0 +1,43 @@
+<div class="container">
+    <ul class="breadcrumbs">
+        <li><a href="/">Главная</a></li>
+        {{#each allCategories}}
+            <li><a href="/cat?id={{this.id}}">{{this.category_name}}</a></li>
+        {{/each}}
+    </ul>
+
+    <div class="row">
+        <div class="col col-md-12">
+            <h1>{{currentCategory.category_name}}</h1>
+            <p>
+                {{currentCategory.description}}
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        {{#each goods}}
+            <div class="col col-md-4">
+                <div class="card">
+                    <h3 class="card-title">{{this.name}}</h3>
+                    <img src="images/{{this.image}}" alt="{{this.name}}">
+                    <p>{{this.description}}</p>
+                    <p>{{this.cost}}</p>
+
+                    <ul class="card-actions">
+                        <li>
+                            <button class="button-primary button-small addToCart" data-goods_id="{{this.id}}">
+                                В корзину
+                            </button>
+                        </li>
+                        <li>
+                            <a href="/goods/{{this.name}}" class="button button-primary-text">Подробнее</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

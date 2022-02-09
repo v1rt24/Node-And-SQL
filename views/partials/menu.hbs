@@ -1,0 +1,31 @@
+<nav>
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="/">Логотип</a>
+        </div>
+        <ul class="nav-links">
+            {{#if isActiveHomeMenu}}
+                <li><a class="active" href="/">Главная</a></li>
+            {{else}}
+                <li><a href="/">Главная</a></li>
+            {{/if}}
+
+            {{#if isActiveCatMenu}}
+                <li><a href="/cat?id=1" class="active">Категории</a></li>
+            {{else}}
+                <li><a href="/cat?id=1">Категории</a></li>
+            {{/if}}
+
+            <li><a href="/cart">Корзина</a></li>
+            <!--{{#if isActiveCatMenu}}
+                <li><a href="/cart" class="active">Корзина</a></li>
+            {{else}}
+                <li><a href="/cart">Корзина</a></li>
+            {{/if}}-->
+
+            <li>
+                <button class="button-primary button-small showModalCartBtn">Корзина</button>
+            </li>
+        </ul>
+    </div>
+</nav>
